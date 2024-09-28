@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Add some extra styles for the Paytm look */
+input {
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0073ff;
+}
