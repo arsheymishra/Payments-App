@@ -24,7 +24,7 @@ export default function Signup() {
     };
 
     try {
-      const response = await fetch('/api/v1/user/signup', {
+      const response = await fetch('https://payments-app-api-sigma.vercel.app/api/v1/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
