@@ -13,7 +13,7 @@ const SignIn = () => {
     setError(null); // Reset error state
 
     try {
-      const response = await axios.post('https://payments-app-api-sigma.vercel.app/api/v1/user/signin', {
+      const response = await axios.post('/api/v1/user/signin', {
         email,
         password,
       });
