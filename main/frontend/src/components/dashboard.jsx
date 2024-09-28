@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch the balance and users
-    fetch('http://localhost:3000/api/v1/account/balance', {
+    fetch('https://payments-app-api-sigma.vercel.app/api/v1/account/balance', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -25,7 +25,7 @@ const Dashboard = () => {
       })
       .catch((err) => console.error(err));
 
-    fetch('http://localhost:3000/api/v1/user/', {
+    fetch('https://payments-app-api-sigma.vercel.app/api/v1/user/', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -39,7 +39,7 @@ const Dashboard = () => {
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
     // Fetch filtered users
-    fetch(`http://localhost:3000/api/v1/user/bulk?filter=${e.target.value}`, {
+    fetch(`https://payments-app-api-sigma.vercel.app/api/v1/user/bulk?filter=${e.target.value}`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -57,7 +57,7 @@ const Dashboard = () => {
       return;
     }
 
-    fetch('http://localhost:3000/api/v1/account/transfer', {
+    fetch('https://payments-app-api-sigma.vercel.app/api/v1/account/transfer', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
