@@ -1,4 +1,3 @@
-
 import { jwtVerify } from 'jose';
 
 export async function authMiddleware(req, res, next) {
@@ -24,6 +23,7 @@ export async function authMiddleware(req, res, next) {
         return res.status(403).json({ message: 'Invalid or expired token' });
     }
 }
+
 
 // import jwt from 'jsonwebtoken';
 
