@@ -25,7 +25,7 @@ const Dashboard = () => {
       })
       .catch((err) => console.error(err));
 
-    fetch('https:///payments-app-api2.vercel.app/api/v1/user/', {
+    fetch('https://payments-app-api2.vercel.app/api/v1/user/', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
