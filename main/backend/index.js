@@ -6,8 +6,11 @@ const app = express();
 // Middleware to parse JSON
 app.use(json());
 //cors middleware to allow access to frontend
-app.use(cors());//allow all domains means any domain can hit request from this api 
-
+app.use(cors({
+  origin: 'https://payments-app-lemon.vercel.app', // Explicitly trusts your frontend's domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],      // Allows the necessary methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Explicitly allows the headers you're sending
+}));
 // *For specific domain to hit this api*
 // app.use(cors({
 //   origin: 'https://example.com', // Allow only this domain
